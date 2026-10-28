@@ -14,11 +14,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Ledger&display=swap" rel="stylesheet">
     
     <style>
-
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+      }
+      
       body {
-      font-family: "Ledger", serif;
-      font-weight: 400;
-      font-style: normal;  
+        background-color: peru;
+        font-family: "Ledger", serif;
+        font-weight: 400;
+        font-style: normal;  
+        width: 100%;
       }
       
       h1 , h2 , ul {
@@ -28,44 +34,165 @@
       }
       
       h1 {
-      font-weight: 600;
+        font-weight: 600;
+        color: RGB(61, 15, 10);
+        font-size: 20pt;
+        text-align: center;
       }
       
-      h2 {
-      font-weight: 500;
+      #name {
+        font-size: 50pt;
+        padding: 10px;
+        padding-top: 30px;
+        margin: 10px;
+      }
+      
+      #greg-desc {
+        width: 80%;
+        margin: 25px;
+      }
+      
+      #nav {
+        font-weight: 600;
+        font-size: 14pt;
+        padding: 10px;
+        width: 100%;
+        background-color: sienna;
+        
+        display: flex;
+        justify-content: center;
       }
       
       ul {
-      font-weight: 700;
+        font-weight: 700;
+        list-style: none;
+      }
+      
+      #nav li {
+        display: inline;
+        margin-right: 50px;
+      }
+      
+      #nav a {
+        text-decoration: none;
+        color: palegoldenrod;
+      }
+      
+      #nav a:hover {
+        text-decoration: underline wavy;
+        color: white;
+      }
+      
+      #main {
+        width: 100%;
+        justify-items: center;
+
+        margin: 0px;
+      }
+      
+      #sandwich-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 65%;
+        
+        border: 5px solid palegoldenrod;
+        border-radius: 10px;
+        
+        background-color: white;
+        margin-bottom: 20px;
+      }
+      
+      .grid-item {
+        width: auto;
+        justify-content: center;
+        
+        text-align: center;
+        margin: 5px;
+        padding: 10px;
+        background-color: palegoldenrod;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .banh-mi-name {
+        background-color: peru;
+        border-radius: 0px 0px 10px 10px;
+        margin: 0px;
+        padding: 5px;
+        width: 95%;
+        justify-content: center;
+      }
+      h2 {
+        font-weight: 500;
+        padding: 0px;
+        margin: 0px;
+      }
+      
+      .grid-item p {
+        font-size: 10pt;
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 3px;
+      }
+      
+      .grid-item img {
+        max-width: 95%;
+        margin: 10px;
+        margin-bottom: 0px;
+        border-radius: 10px 10px 0px 0px;
+      }
+      
+      footer {
+        background-color: sienna;
+        padding: 30px;
+        color: palegoldenrod;
+        text-align: center;
       }
       
     </style>
   </head>
   <body>
+    <div id="main">
+    <h1 id="name">Greg’s Banh Mi</h1>
 
-    <h1>Greg’s Banh Mi</h1>
-
-    <ul>
+    <ul id="nav">
       <li><a href="#">Home</a></li>
       <li><a href="#">Menu</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
 
-    <h1>At Greg’s Banh Mi, we’re serving up the perfect marriage of French and Vietnamese culinary traditions&mdash;crispy-on-the-outside, pillowy-on-the-inside baguettes loaded with bold, fresh flavours that'll make your taste buds sing.</h1>
-
-    <h2>Classic Pork Banh Mi</h2>
+    <h1 id="greg-desc">At Greg’s Banh Mi, we’re serving up the perfect marriage of French and Vietnamese culinary traditions&mdash;crispy-on-the-outside, pillowy-on-the-inside baguettes loaded with bold, fresh flavours that'll make your taste buds sing.</h1>
+  
+    <div id="sandwich-container">
+      <div class="grid-item">
+    <img src="banh-mi.jpg" alt="Photo of Classic Pork Banh Mi">
+        <div class="banh-mi-name"><h2>Classic Pork Banh Mi</h2></div>
     <p>Tender marinated pork topped with crisp pickled vegetables, fresh cilantro, and a smear of p&acirc;t&eacute; on a perfectly crusty baguette. A traditional favorite that balances savory, sweet, and tangy flavors in every bite.</p>
+      </div>
 
-    <h2>Lemongrass Chicken Banh Mi</h2>
+      <div class="grid-item">
+    <img src="banh-mi.jpg" alt="Photo of Lemongrass Chicken Banh Mi">
+    <div class="banh-mi-name"><h2>Lemongrass Chicken Banh Mi</h2></div>
     <p>Grilled chicken marinated in fragrant lemongrass and garlic, paired with cucumber, jalape&ntilde;os, and our house mayo. Light yet satisfying, this sandwich brings bright, aromatic flavors that'll transport you straight to Saigon.</p>
+      </div>
 
-    <h2>Tofu Banh Mi</h2>
+      <div class="grid-item">
+    <img src="banh-mi.jpg" alt="Photo of Tofu Banh Mi">
+        <div class="banh-mi-name"><h2>Tofu Banh Mi</h2></div>
     <p>Crispy pan-fried tofu glazed in sweet soy sauce, layered with daikon, carrots, and fresh herbs for a vegetarian delight. Proof that plant-based can be just as bold and craveable as any meat-filled sandwich.</p>
-
-    <h2>Five-Spice Beef Banh Mi</h2>
+      </div>
+      
+      <div class="grid-item">
+    <img src="banh-mi.jpg" alt="Photo of Five-Spice Beef Banh Mi">
+        <div class="banh-mi-name"><h2>Five-Spice Beef Banh Mi</h2></div>
     <p>Thinly sliced beef seared with aromatic five-spice blend and served with pickled vegetables and spicy Sriracha mayo. Rich, warming spices meet cool, crunchy toppings for an unforgettable flavor experience.</p>
-
+      </div>
+    </div>
+      
+    </div>
     <footer>
       <p>Because life’s too short for boring sandwiches. Greg’s got you covered&mdash;one crispy baguette at a time.</p>
     </footer>
